@@ -705,3 +705,19 @@ Mon 12 Sep 2022 02:41:53 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 464cc3d
+Mon 12 Sep 2022 02:44:14 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:19: error: passing argument 2 of ‘insertMap’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   67 |     insertMap(map,&oldB[i]->key,&oldB[i]->value);
+      |                   ^~~~~~~~~~~~~
+      |                   |
+      |                   char **
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘char **’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+33b5ee5
