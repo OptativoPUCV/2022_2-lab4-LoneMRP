@@ -401,3 +401,18 @@ Mon 12 Sep 2022 01:32:25 AM UTC:
  tests:  16|1
 total_score: 60/70
 3ce8619
+Mon 12 Sep 2022 02:15:19 AM UTC: 
+ hashmap.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:22: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   66 |     insertMap(map,aux->bucket[i]->key,aux->bucket[i]->value);
+      |                      ^~
+      |                      ->
+hashmap.c:66:42: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   66 |     insertMap(map,aux->bucket[i]->key,aux->bucket[i]->value);
+      |                                          ^~
+      |                                          ->
+Compilation failed
+fed6d1b
