@@ -17,7 +17,6 @@ struct HashMap {
 };
 
 Pair * createPair( char * key,  void * value) {
-    printf("hello");
     Pair * new = (Pair *)malloc(sizeof(Pair));
     new->key = key;
     new->value = value;
