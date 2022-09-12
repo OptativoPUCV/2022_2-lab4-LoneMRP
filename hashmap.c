@@ -64,7 +64,7 @@ void enlarge(HashMap * map) {
   map->size = 0;
   int i;
   for (i=0;i<map->capacity/2;i++){
-    insertMap(map,oldB[i]->key,oldB[i]->value);
+    insertMap(map,oldB[0]->key,oldB[0]->value);
   }
   enlarge_called = 1; //no borrar (testing purposes)
 }
