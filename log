@@ -438,3 +438,20 @@ hashmap.c:66:37: error: invalid type argument of ‘->’ (have ‘Pair’)
 cc1: all warnings being treated as errors
 Compilation failed
 b365d88
+Mon 12 Sep 2022 02:19:23 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:14: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   60 |   Pair* aux= map->buckets;
+      |              ^~~
+hashmap.c:66:22: error: ‘Pair’ has no member named ‘buckets’
+   66 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                      ^~
+hashmap.c:66:43: error: ‘Pair’ has no member named ‘buckets’
+   66 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                                           ^~
+cc1: all warnings being treated as errors
+Compilation failed
+900788e
