@@ -105,7 +105,7 @@ Pair * firstMap(HashMap * map) {
   Pair* aux;
   for(int i=0;i<map->capacity;i++)
     if(map->buckets[i]!=NULL)
-      aux=map->buckets[i]
+      aux=map->buckets[i];
     return aux;
 }
 
