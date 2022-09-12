@@ -123,7 +123,7 @@ Pair * nextMap(HashMap * map) {
       break;
     }
   }
-  if(i==map->capacity){
+  if(i==map->capacity)
       aux=NULL;
   map->current = i;
   return aux;
