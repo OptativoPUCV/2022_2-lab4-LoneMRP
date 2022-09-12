@@ -102,9 +102,9 @@ Pair * searchMap(HashMap * map,  char * key) {
   return NULL;
 }
 Pair * firstMap(HashMap * map) {
-  Pair* aux;
+  Pair * aux = (Pair *)malloc(sizeof(Pair));
   for(int i=0;i<map->capacity;i++)
-    if(map->buckets[i]!=NULL)
+    if(map->buckets[i] != NULL)
       aux=map->buckets[i];
     return aux;
 }

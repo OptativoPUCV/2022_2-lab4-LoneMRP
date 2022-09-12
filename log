@@ -214,3 +214,17 @@ hashmap.c:109:12: error: ‘aux’ may be used uninitialized in this function [-
 cc1: all warnings being treated as errors
 Compilation failed
 87268e2
+Mon 12 Sep 2022 01:07:57 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:106:3: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+  106 |   for(int i=0;i<map->capacity;i++)
+      |   ^~~
+hashmap.c:109:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  109 |     return aux;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7406387
