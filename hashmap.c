@@ -57,7 +57,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-  
+  int max;
   Pair** oldB = map->buckets;
   map -> capacity *= 2;
   map->buckets = (Pair**)malloc(sizeof(Pair)*map->capacity);

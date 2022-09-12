@@ -798,3 +798,9 @@ hashmap.c:66:3: error: ‘max’ undeclared (first use in this function); did yo
 hashmap.c:66:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3493ec2
+Mon 12 Sep 2022 02:49:22 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|1
+total_score: 60/70
+2860218
