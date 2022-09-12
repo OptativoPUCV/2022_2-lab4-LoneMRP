@@ -109,7 +109,7 @@ Pair * firstMap(HashMap * map) {
       break;
     }
   }
-map->current= i
+map->current= i;
 return aux;
 }
 

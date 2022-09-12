@@ -325,3 +325,14 @@ hashmap.c:114:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 ea89223
+Mon 12 Sep 2022 01:25:32 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:112:15: error: ‘i’ undeclared (first use in this function)
+  112 | map->current= i;
+      |               ^
+hashmap.c:112:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+74da29b
