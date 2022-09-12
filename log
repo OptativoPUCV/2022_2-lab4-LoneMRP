@@ -721,3 +721,27 @@ hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘char **�
 cc1: all warnings being treated as errors
 Compilation failed
 33b5ee5
+Mon 12 Sep 2022 02:44:45 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:25: error: expected ‘)’ before ‘[’ token
+   67 |     insertMap(map,&&oldB[i]->key,&oldB[i]->value);
+      |                         ^
+      |                         )
+hashmap.c:67:5: error: too few arguments to function ‘insertMap’
+   67 |     insertMap(map,&&oldB[i]->key,&oldB[i]->value);
+      |     ^~~~~~~~~
+hashmap.c:42:6: note: declared here
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |      ^~~~~~~~~
+hashmap.c:67:5: error: label ‘oldB’ used but not defined
+   67 |     insertMap(map,&&oldB[i]->key,&oldB[i]->value);
+      |     ^~~~~~~~~
+hashmap.c:61:10: error: unused variable ‘oldB’ [-Werror=unused-variable]
+   61 |   Pair** oldB = map->buckets;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5b5ea23
