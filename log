@@ -786,3 +786,15 @@ hashmap.c:66:7: error: ‘capacity’ undeclared (first use in this function)
       |       ^~~~~~~~
 Compilation failed
 10cce5b
+Mon 12 Sep 2022 02:49:12 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:3: error: ‘max’ undeclared (first use in this function); did you mean ‘map’?
+   66 |   max=map->capacity/2;
+      |   ^~~
+      |   map
+hashmap.c:66:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3493ec2
