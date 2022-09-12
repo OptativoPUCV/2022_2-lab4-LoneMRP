@@ -582,3 +582,18 @@ hashmap.c:68:43: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
       |                                           ->
 Compilation failed
 c5c23a7
+Mon 12 Sep 2022 02:29:09 AM UTC: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:5: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   68 |     key=aux[i]->key;
+      |     ^~~
+      |     key_t
+hashmap.c:68:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:69:5: error: ‘value’ undeclared (first use in this function)
+   69 |     value=aux[i]->value;
+      |     ^~~~~
+Compilation failed
+c31b81c
