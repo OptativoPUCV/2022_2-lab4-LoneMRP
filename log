@@ -597,3 +597,36 @@ hashmap.c:69:5: error: ‘value’ undeclared (first use in this function)
       |     ^~~~~
 Compilation failed
 c31b81c
+Mon 12 Sep 2022 02:30:24 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:8: error: variable or field ‘value’ declared void
+   62 |   void value;
+      |        ^~~~~
+hashmap.c:70:8: error: assignment to ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   70 |     key=aux[i]->key;
+      |        ^
+hashmap.c:71:10: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   71 |     value=aux[i]->value;
+      |          ^
+hashmap.c:72:19: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+   72 |     insertMap(map,key,value);
+      |                   ^~~
+      |                   |
+      |                   char
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘char’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+hashmap.c:72:23: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+   72 |     insertMap(map,key,value);
+      |                       ^~~~~
+      |                       |
+      |                       int
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ca83fb8

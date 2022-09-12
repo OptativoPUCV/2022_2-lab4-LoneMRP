@@ -58,6 +58,8 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
+  char key;
+  void value;
   
   Pair** aux= map->buckets;
   map -> capacity *= 2;
