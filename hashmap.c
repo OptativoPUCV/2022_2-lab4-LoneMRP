@@ -59,7 +59,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   Pair** aux= map->buckets;
   map -> capacity *= 2;
-  map->buckets = (Pair**)calloc(map->capacity,sizeof(Pair));
+  map->buckets = (Pair**)malloc(sizeof(Pair)*map->capacity);
   map->size = 0;
   int i;
   for (i=0;i<map->capacity/2;i++){
