@@ -475,3 +475,20 @@ Mon 12 Sep 2022 02:20:23 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 59da657
+Mon 12 Sep 2022 02:20:36 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:14: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   60 |   Pair* aux= map->buckets;
+      |              ^~~
+hashmap.c:66:25: error: invalid type argument of ‘->’ (have ‘Pair’)
+   66 |     insertMap(map,aux[i]->key,aux[i]->value);
+      |                         ^~
+hashmap.c:66:37: error: invalid type argument of ‘->’ (have ‘Pair’)
+   66 |     insertMap(map,aux[i]->key,aux[i]->value);
+      |                                     ^~
+cc1: all warnings being treated as errors
+Compilation failed
+489bd4f
