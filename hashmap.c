@@ -65,7 +65,7 @@ void enlarge(HashMap * map) {
   int i;
   max=capacity/2;
   for (i=0;i<max;i++){
-    printf("%s %d",oldB[i]->key,oldB[i]->value);
+    printf("%s",oldB[i]->key);
     insertMap(map,oldB[i]->key,oldB[i]->value);
   }
   enlarge_called = 1; //no borrar (testing purposes)

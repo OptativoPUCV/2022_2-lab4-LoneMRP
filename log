@@ -837,3 +837,14 @@ hashmap.c:68:17: error: format ‘%d’ expects argument of type ‘int’, but 
 cc1: all warnings being treated as errors
 Compilation failed
 742440d
+Mon 12 Sep 2022 02:54:55 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:7: error: ‘capacity’ undeclared (first use in this function)
+   66 |   max=capacity/2;
+      |       ^~~~~~~~
+hashmap.c:66:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e87064f
