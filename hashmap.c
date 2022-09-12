@@ -110,7 +110,7 @@ Pair * firstMap(HashMap * map) {
       break;
     }
   }
-map->current= i;
+  map->current= i;
 return aux;
 }
 
@@ -118,7 +118,7 @@ Pair * nextMap(HashMap * map) {
   Pair * aux = (Pair *)malloc(sizeof(Pair));
   int i;
   for(i=map->current+1;i < map->capacity;i++){
-    if(map->buckets[i] != NULL){
+    if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
       aux=map->buckets[i];
       break;
     }
