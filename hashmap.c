@@ -63,7 +63,7 @@ void enlarge(HashMap * map) {
   map->buckets = (Pair**)malloc(sizeof(Pair)*map->capacity);
   map->size = 0;
   int i;
-  max=map->capacity/2;
+  max=8;
   for (i=0;i<max;i++){
     insertMap(map,oldB[i]->key,oldB[i]->value);
   }
