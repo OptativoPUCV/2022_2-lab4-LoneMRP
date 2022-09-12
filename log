@@ -760,3 +760,8 @@ hashmap.c:67:38: error: ‘*(oldB + (sizetype)((long unsigned int)i * 8))’ is 
       |                                      ->
 Compilation failed
 5b0bcda
+Mon 12 Sep 2022 02:45:48 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+11e1dc9
