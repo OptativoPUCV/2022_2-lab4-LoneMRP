@@ -507,3 +507,18 @@ Mon 12 Sep 2022 02:24:02 AM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 8417347
+Mon 12 Sep 2022 02:25:15 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:22: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   67 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                      ^~
+      |                      ->
+hashmap.c:67:43: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   67 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                                           ^~
+      |                                           ->
+Compilation failed
+acfc585
