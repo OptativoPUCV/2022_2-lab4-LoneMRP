@@ -669,3 +669,18 @@ hashmap.c:68:37: error: ‘I’ undeclared (first use in this function)
       |                                     ^
 Compilation failed
 379eff5
+Mon 12 Sep 2022 02:41:19 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:32: error: ‘oldb’ undeclared (first use in this function); did you mean ‘oldB’?
+   68 |     insertMap(map,oldB[i]->key,oldb[I]->value);
+      |                                ^~~~
+      |                                oldB
+hashmap.c:68:32: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:68:37: error: ‘I’ undeclared (first use in this function)
+   68 |     insertMap(map,oldB[i]->key,oldb[I]->value);
+      |                                     ^
+Compilation failed
+af898a4
