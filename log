@@ -272,3 +272,14 @@ hashmap.c:123:18: error: ‘i’ undeclared (first use in this function)
       |                  ^
 Compilation failed
 ef46ded
+Mon 12 Sep 2022 01:17:04 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:123:18: error: ‘i’ undeclared (first use in this function)
+  123 |   map->current = i;
+      |                  ^
+hashmap.c:123:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+4d6d195
