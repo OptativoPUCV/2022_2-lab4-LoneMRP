@@ -153,3 +153,27 @@ Mon 12 Sep 2022 12:50:56 AM UTC:
  tests:  11|2
 total_score: 50/70
 7e486e3
+Mon 12 Sep 2022 01:05:06 AM UTC: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:106:3: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘for’
+  106 |   for(int i=0;i<map->capacity;i++)
+      |   ^~~
+hashmap.c:108:7: error: ‘aux’ undeclared (first use in this function)
+  108 |       aux=map->buckets[i]
+      |       ^~~
+hashmap.c:108:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:108:26: error: expected ‘;’ before ‘return’
+  108 |       aux=map->buckets[i]
+      |                          ^
+      |                          ;
+  109 |     return aux;
+      |     ~~~~~~                
+hashmap.c:110:1: error: control reaches end of non-void function [-Werror=return-type]
+  110 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+84af2b9
