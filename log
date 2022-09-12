@@ -301,3 +301,27 @@ Mon 12 Sep 2022 01:23:56 AM UTC:
  tests:  12|2
 total_score: 50/70
 1095ba0
+Mon 12 Sep 2022 01:25:27 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:112:15: error: ‘i’ undeclared (first use in this function)
+  112 | map->current= i
+      |               ^
+hashmap.c:112:15: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:112:16: error: expected ‘;’ before ‘return’
+  112 | map->current= i
+      |                ^
+      |                ;
+  113 | return aux;
+      | ~~~~~~          
+hashmap.c:105:10: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+  105 |   Pair * aux = (Pair *)malloc(sizeof(Pair));
+      |          ^~~
+hashmap.c:114:1: error: control reaches end of non-void function [-Werror=return-type]
+  114 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ea89223
