@@ -745,3 +745,18 @@ hashmap.c:61:10: error: unused variable ‘oldB’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5b5ea23
+Mon 12 Sep 2022 02:45:35 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:26: error: ‘*(oldB + (sizetype)((long unsigned int)i * 8))’ is a pointer; did you mean to use ‘->’?
+   67 |     insertMap(map,oldB[i].key,oldB[i].value);
+      |                          ^
+      |                          ->
+hashmap.c:67:38: error: ‘*(oldB + (sizetype)((long unsigned int)i * 8))’ is a pointer; did you mean to use ‘->’?
+   67 |     insertMap(map,oldB[i].key,oldB[i].value);
+      |                                      ^
+      |                                      ->
+Compilation failed
+5b0bcda
