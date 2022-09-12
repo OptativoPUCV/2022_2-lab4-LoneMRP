@@ -63,7 +63,7 @@ void enlarge(HashMap * map) {
   map->size = 0;
   int i;
   for (i=0;i<map->capacity/2;i++){
-    insertMap(map,aux[i].key,aux[i].value);
+    insertMap(map,aux[i]->key,aux[i]->value);
   }
   enlarge_called = 1; //no borrar (testing purposes)
 }

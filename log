@@ -470,3 +470,8 @@ hashmap.c:66:36: error: ‘*(aux + (sizetype)((long unsigned int)i * 8))’ is a
       |                                    ->
 Compilation failed
 10323f9
+Mon 12 Sep 2022 02:20:23 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+59da657
