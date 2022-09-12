@@ -684,3 +684,14 @@ hashmap.c:68:37: error: ‘I’ undeclared (first use in this function)
       |                                     ^
 Compilation failed
 af898a4
+Mon 12 Sep 2022 02:41:28 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:37: error: ‘I’ undeclared (first use in this function)
+   68 |     insertMap(map,oldB[i]->key,oldB[I]->value);
+      |                                     ^
+hashmap.c:68:37: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+dbdca4e
