@@ -58,7 +58,6 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  printf("enlarge");
   int max;
   Pair** oldB = map->buckets;
   map -> capacity *= 2;
@@ -66,9 +65,7 @@ void enlarge(HashMap * map) {
   map->size = 0;
   int i;
   max=map->capacity/2;
-    printf("enlarge");
   for (i=0;i<max;i++){
-    printf("enlarge");
     if(oldB[i] != NULL)
       insertMap(map,oldB[i]->key,oldB[i]->value);
   }
