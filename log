@@ -630,3 +630,8 @@ hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 ca83fb8
+Mon 12 Sep 2022 02:30:43 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+3e48c79
