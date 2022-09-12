@@ -17,6 +17,7 @@ struct HashMap {
 };
 
 Pair * createPair( char * key,  void * value) {
+    printf("hello");
     Pair * new = (Pair *)malloc(sizeof(Pair));
     new->key = key;
     new->value = value;
@@ -65,7 +66,6 @@ void enlarge(HashMap * map) {
   int i;
   max=map->capacity/2;
   for (i=0;i<max;i++){
-    printf("%s",oldB[0]->key);
     insertMap(map,oldB[i]->key,oldB[i]->value);
   }
   enlarge_called = 1; //no borrar (testing purposes)
