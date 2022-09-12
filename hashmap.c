@@ -70,7 +70,8 @@ void enlarge(HashMap * map) {
     printf("enlarge");
   for (i=0;i<max;i++){
     printf("enlarge");
-    insertMap(map,oldB[i]->key,oldB[i]->value);
+    if(oldB[i] != NULL)
+      insertMap(map,oldB[i]->key,oldB[i]->value);
   }
 }
 
