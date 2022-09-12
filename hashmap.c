@@ -102,8 +102,6 @@ Pair * searchMap(HashMap * map,  char * key) {
   return NULL;
 }
 
-    return NULL;
-}
 
 Pair * firstMap(HashMap * map) {
 
