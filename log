@@ -72,3 +72,24 @@ Mon 12 Sep 2022 12:43:44 AM UTC:
  tests:  5|4
 total_score: 30/70
 1cf84fe
+Mon 12 Sep 2022 12:48:56 AM UTC: 
+ hashmap.c | 26 +++++++++++++++++++++++++-
+ 1 file changed, 25 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:78:24: error: statement with no effect [-Werror=unused-value]
+   78 |     eliminatePair->key == NULL;
+      |                        ^
+hashmap.c: At top level:
+hashmap.c:83:1: error: expected identifier or ‘(’ before ‘}’ token
+   83 | }
+      | ^
+hashmap.c:107:5: error: expected identifier or ‘(’ before ‘return’
+  107 |     return NULL;
+      |     ^~~~~~
+hashmap.c:108:1: error: expected identifier or ‘(’ before ‘}’ token
+  108 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+609ecd9
