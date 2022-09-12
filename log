@@ -2,3 +2,21 @@ Mon 12 Sep 2022 12:27:47 AM UTC:
  tests:  0|6
 total_score: 0/70
 6dd7146
+Mon 12 Sep 2022 12:32:34 AM UTC: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:47: error: expected ‘)’ before ‘capacity’
+   55 |   HashMap* M = (HashMap)malloc(sizeof(HashMap)capacity);
+      |                               ~               ^~~~~~~~
+      |                                               )
+hashmap.c:55:3: error: conversion to non-scalar type requested
+   55 |   HashMap* M = (HashMap)malloc(sizeof(HashMap)capacity);
+      |   ^~~~~~~
+hashmap.c:56:14: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   56 |   M->buckets = (Pair*)calloc(capacity,sizeof(Pair));
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+ca47553
