@@ -567,3 +567,18 @@ hashmap.c:68:41: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
       |                                         ->
 Compilation failed
 daeee6a
+Mon 12 Sep 2022 02:27:05 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:22: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   68 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                      ^~
+      |                      ->
+hashmap.c:68:43: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   68 |     insertMap(map,aux->buckets[i]->key,aux->buckets[i]->value);
+      |                                           ^~
+      |                                           ->
+Compilation failed
+c5c23a7
