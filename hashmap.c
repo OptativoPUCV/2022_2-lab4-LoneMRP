@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       break;
     }
     i++;
-    if(i = map->capacity){
+    if(i == map->capacity){
       i = 0;
     }
   }
