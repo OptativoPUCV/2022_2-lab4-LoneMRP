@@ -640,3 +640,18 @@ Mon 12 Sep 2022 02:37:57 AM UTC:
  1 file changed, 4 insertions(+), 6 deletions(-)
  tests:  0|0
 b5338de
+Mon 12 Sep 2022 02:40:37 AM UTC: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:19: error: ‘aux’ undeclared (first use in this function)
+   68 |     insertMap(map,aux->key,aux->value);
+      |                   ^~~
+hashmap.c:68:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:62:10: error: unused variable ‘oldB’ [-Werror=unused-variable]
+   62 |   Pair** oldB = map->buckets;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ec45734
