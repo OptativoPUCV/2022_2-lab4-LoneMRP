@@ -20,3 +20,21 @@ hashmap.c:56:14: error: assignment to ‘Pair **’ from incompatible pointer ty
 cc1: all warnings being treated as errors
 Compilation failed
 ca47553
+Mon 12 Sep 2022 12:36:00 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:47: error: expected ‘)’ before ‘capacity’
+   55 |   HashMap* M = (HashMap)malloc(sizeof(HashMap)capacity);
+      |                                               ^~~~~~~~
+      |                                               )
+hashmap.c:55:3: error: conversion to non-scalar type requested
+   55 |   HashMap* M = (HashMap)malloc(sizeof(HashMap)capacity);
+      |   ^~~~~~~
+hashmap.c:56:14: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   56 |   M->buckets = (Pair*)calloc(capacity,sizeof(Pair));
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+41f8b55
