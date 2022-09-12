@@ -109,7 +109,7 @@ Pair * firstMap(HashMap * map) {
       break;
     }
   }
-return aux
+return aux;
 }
 
 Pair * nextMap(HashMap * map) {
