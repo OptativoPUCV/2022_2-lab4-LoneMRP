@@ -819,3 +819,21 @@ Mon 12 Sep 2022 02:50:52 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 c3c8462
+Mon 12 Sep 2022 02:54:06 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:7: error: ‘capacity’ undeclared (first use in this function)
+   66 |   max=capacity/2;
+      |       ^~~~~~~~
+hashmap.c:66:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:68:17: error: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘void *’ [-Werror=format=]
+   68 |     printf("%s %d",oldB[i]->key,oldB[i]->value);
+      |                ~^               ~~~~~~~~~~~~~~
+      |                 |                      |
+      |                 int                    void *
+      |                %p
+cc1: all warnings being treated as errors
+Compilation failed
+742440d
